@@ -1,5 +1,5 @@
 module FeedlyApi
-  class Client
+  module Caregories
     attr_accessor :access_token
 
     def initialize(params)

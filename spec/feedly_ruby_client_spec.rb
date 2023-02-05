@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe FeedlyRubyClient do
+RSpec.describe FeedlyApi do
   it "has a version number" do
-    expect(FeedlyRubyClient::VERSION).not_to be nil
+    expect(FeedlyApi::VERSION).not_to be nil
   end
 
   it "does something useful" do

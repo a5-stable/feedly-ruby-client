@@ -1,4 +1,4 @@
-module FeedlyRubyClient
+module FeedlyApi
   VERSION: String
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
 end
