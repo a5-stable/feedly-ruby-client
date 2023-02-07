@@ -3,8 +3,7 @@ module FeedlyApi
     module Boards
 
       def boards
-        res = get("boards")
-        JSON.parse(res.body)
+        get("boards")
       end
     end
   end

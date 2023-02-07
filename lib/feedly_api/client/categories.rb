@@ -3,8 +3,7 @@ module FeedlyApi
     module Categories
 
       def categories
-        res = get("categories")
-        JSON.parse(res.body)
+        get("categories")
       end
     end
   end

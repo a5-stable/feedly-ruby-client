@@ -5,12 +5,16 @@ module FeedlyApi
 
     def get(path, params = {})
       path = API_VERSION_PATH + path
-      conn.get(path, params)
+      res = conn.get(path, params)
+
+      respond(res)
     end
 
     def post(path, params = {})
       path = API_VERSION_PATH + path
-      conn.post(path, params)
+      res = conn.post(path, params)
+      
+      respond(res)
     end
 
     private
@@ -21,8 +25,14 @@ module FeedlyApi
 
     def base_headers
       {
+        Accept: "application/json",
+        :"Content-Type" => "application/json",
         Authorization: "Bearer #{access_token}"
       }
+    end
+
+    def respond(res)
+      JSON.parse(res.body)
     end
   end
 end
