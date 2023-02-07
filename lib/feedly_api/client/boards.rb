@@ -3,16 +3,7 @@ module FeedlyApi
     module Boards
 
       def boards
-        options = { 
-          headers: {
-            Authorization: "Bearer #{access_token}"
-          }
-        }
-  
-        http_client = Faraday.new("https://cloud.feedly.com/v3/boards", options)
-        res = http_client.get
-  
-        require 'json'
+        res = get("boards")
         JSON.parse(res.body)
       end
     end
