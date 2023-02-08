@@ -2,6 +2,8 @@ require 'feedly_api/client/boards'
 require 'feedly_api/client/categories'
 require 'feedly_api/client/collections'
 require 'feedly_api/client/feeds'
+require 'feedly_api/client/markers'
+require 'feedly_api/client/search'
 require 'feedly_api/client/tags'
 require 'feedly_api/request'
 require 'json'
@@ -12,6 +14,8 @@ module FeedlyApi
     include FeedlyApi::Client::Categories
     include FeedlyApi::Client::Collections
     include FeedlyApi::Client::Feeds
+    include FeedlyApi::Client::Markers
+    include FeedlyApi::Client::Search
     include FeedlyApi::Client::Tags
     include FeedlyApi::Request
 
