@@ -15,7 +15,7 @@ module FeedlyApi
       end
 
       def update_collection(collection_id, params = {})
-        params[:id] = GI.escape(collection_id)
+        params[:id] = collection_id
         post("collections", params)
       end
 
