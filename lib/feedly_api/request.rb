@@ -17,6 +17,20 @@ module FeedlyApi
       respond(res)
     end
 
+    def put(path, params = {})
+      path = API_VERSION_PATH + path
+      res = conn.post(path, params)
+      
+      respond(res)
+    end
+
+    def delete(path, params = {})
+      path = API_VERSION_PATH + path
+      res = conn.delete(path, params)
+      
+      respond(res)
+    end
+
     private
 
     def conn
